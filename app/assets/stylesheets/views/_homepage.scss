@@ -6,22 +6,12 @@ body.homepage {
     display: none;
   }
 
-  #wrapper,
-  #content {
-    margin: 0;
-    width: auto; // needed for IE overides
-    max-width: 100%;
-  }
-
-  .feedback-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 govuk-spacing(3);
-
-    @include govuk-media-query($from: tablet) {
-      padding: 0 govuk-spacing(6);
-    }
-  }
+  // #wrapper,
+  // #content {
+  //   margin: 0;
+  //   width: auto; // needed for IE overides
+  //   max-width: 100%;
+  // }
 }
 // stylelint-enable selector-no-qualifying-type, selector-max-id
 

@@ -9,6 +9,6 @@ class HomepageController < ApplicationController
 
     fetch_and_setup_content_item("/")
 
-    render locals: { full_width: true }
+    slimmer_template "gem_layout_full_width"
   end
 end
