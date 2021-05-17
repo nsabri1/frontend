@@ -23,8 +23,8 @@
   <% end %>
 
   <form method="post" id="local-locator-form" class="location-form">
-    <fieldset>
-      <legend class="visuallyhidden">Postcode lookup</legend>
+    <fieldset class="govuk-fieldset">
+      <legend class=" govuk-fieldset__legend govuk-visually-hidden">Postcode lookup</legend>
 
       <%= render partial: 'draft_fields' %>
 
@@ -38,6 +38,7 @@
         hint: "For example SW1A 2AA",
         invalid: @location_error ? 'true' : 'false',
         autocomplete: "postal-code",
+        width: 10,
       } %>
 
       <%= render "govuk_publishing_components/components/button", text: "Find", margin_bottom: true %>
