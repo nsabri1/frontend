@@ -30,17 +30,17 @@
                 <strong>
                   It is illegal to travel abroad from the UK for holidays.
                 </strong>
-                Follow current COVID-19 rules where you live: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/covid-19-alert-levels">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
+                Follow current COVID-19 rules where you live: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do" class="govuk-link">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/" class="govuk-link">Scotland</a>, <a href="https://gov.wales/covid-19-alert-levels" class="govuk-link">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you" class="govuk-link">Northern Ireland</a>.
               </p>
               <p class="govuk-body">
-                In England, you must have a <a href="/guidance/coronavirus-covid-19-declaration-form-for-international-travel">permitted reason to travel abroad</a> and complete the declaration form.
+                In England, you must have a <a href="/guidance/coronavirus-covid-19-declaration-form-for-international-travel" class="govuk-link">permitted reason to travel abroad</a> and complete the declaration form.
               </p>
               <p class="govuk-body">
                 Some countries have closed borders, and any country may further restrict travel or bring in new social distancing rules with little warning.
-                <a href="/guidance/travel-advice-novel-coronavirus">Check our advice</a> for each country you will visit or transit through.
+                <a href="/guidance/travel-advice-novel-coronavirus" class="govuk-link">Check our advice</a> for each country you will visit or transit through.
               </p>
               <p class="govuk-body">
-                When you return, follow the rules to <a href="/uk-border-control">enter the UK from abroad</a> (except from Ireland).
+                When you return, follow the rules to <a href="/uk-border-control" class="govuk-link">enter the UK from abroad</a> (except from Ireland).
               </p>
             </div>
           </div>
@@ -53,18 +53,17 @@
     <section class="govuk-grid-row">
       <div id="country-filter" class="govuk-grid-column-one-half">
         <form class="country-filter-form">
-          <fieldset class="country-filter-form__form-group">
-            <%= render "govuk_publishing_components/components/input", {
-              label: {
-                text: "Search for a country or territory - you can sign up for email updates on its page"
-              },
-              id: "country",
-              name: "country",
-              type: "text",
-              search_icon: true,
-              width: 20,
-            } %>
-          </fieldset>
+        <%= render "govuk_publishing_components/components/fieldset", {
+          legend_text: "Search for a country or territory - you can sign up for email updates on its page"
+          } do %>
+          <%= render "govuk_publishing_components/components/input", {
+            id: "country",
+            name: "country",
+            type: "text",
+            search_icon: true,
+            width: 20,
+          } %>
+        <% end %>
         </form>
       </div>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible app-full-width-break">

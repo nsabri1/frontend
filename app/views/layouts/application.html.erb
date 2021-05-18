@@ -41,13 +41,6 @@
       <% end %>
 
       <% if local_assigns.exclude?(:full_width) %>
-        <div class="govuk-grid-row">
-          <%= yield %>
-        </div>
-        <div class="govuk-grid-row">
-          <%= yield :after_content %>
-        </div>
-      <% else %>
         <%= yield %>
         <%= yield :after_content %>
       <% end %>

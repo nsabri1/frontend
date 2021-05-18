@@ -7,9 +7,9 @@ class TravelAdviceController < ApplicationController
     @presenter = TravelAdviceIndexPresenter.new(@content_item)
 
     respond_to do |format|
-      format.html { 
+      format.html do
         slimmer_template "gem_layout"
-       }
+      end
       format.atom do
         set_expiry(5.minutes)
         headers["Access-Control-Allow-Origin"] = "*"
