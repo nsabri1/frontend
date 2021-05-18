@@ -66,6 +66,10 @@ Assisted digital satisfaction surveys:
 * https://www.gov.uk/bank-holidays
 * https://www.gov.uk/when-do-the-clocks-change
 
+## View the app's Component Guide
+
+ * https://frontend.dev.gov.uk/component-guide
+
 ## Nomenclature
 
 - **format**: our phrase for a type of content
