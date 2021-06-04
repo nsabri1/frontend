@@ -2,7 +2,7 @@ class SavePagesController < ApplicationController
   include GovukPersonalisation::AccountConcern
 
   before_action :set_no_cache_headers
-  before_action { head :not_found unless feature_flag_enabled? }
+  # before_action { head :not_found unless feature_flag_enabled? }
   before_action { head :unprocessable_entity if params[:page_path].blank? }
 
   def create
@@ -10,7 +10,7 @@ class SavePagesController < ApplicationController
       page_path: page_path,
       govuk_account_session: account_session_header,
     )
-    redirect_to page_path + "?personalisation=page_saved"
+    redirect_to Plek.find("government-frontend") + page_path + "?personalisation=page_saved"
   rescue GdsApi::HTTPUnauthorized
     authenticate(save_page_path(page_path: page_path))
   rescue GdsApi::HTTPUnprocessableEntity
@@ -23,11 +23,11 @@ class SavePagesController < ApplicationController
       govuk_account_session: account_session_header,
     )
 
-    redirect_to page_path + "?personalisation=page_removed"
+    redirect_to Plek.find("government-frontend") + page_path + "?personalisation=page_removed"
   rescue GdsApi::HTTPUnauthorized
     authenticate(remove_saved_page_path(page_path: page_path))
   rescue GdsApi::HTTPNotFound
-    redirect_to page_path + "?personalisation=page_removed"
+    redirect_to Plek.find("government-frontend") + page_path + "?personalisation=page_removed"
   end
 
 private
