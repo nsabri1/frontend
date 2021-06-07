@@ -3,7 +3,7 @@ require "gds_api/test_helpers/account_api"
 
 class SavePagesControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::AccountApi
-  include GovukPersonalisation::SessionHelpers
+  include GovukPersonalisation::RequestSessionHelpers
 
   context "when FEATURE_FLAG_SAVE_A_PAGE environment variable is not 'enabled'" do
     context "GET /account/saved-pages/add" do

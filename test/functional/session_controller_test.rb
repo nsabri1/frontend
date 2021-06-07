@@ -3,7 +3,7 @@ require "gds_api/test_helpers/account_api"
 
 class SessionsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::AccountApi
-  include GovukPersonalisation::SessionHelpers
+  include GovukPersonalisation::RequestSessionHelpers
 
   context "GET sign-in" do
     setup do
